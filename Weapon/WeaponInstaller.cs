@@ -114,18 +114,12 @@ namespace Codebase.App.Weapon
 
         private void OnRechargeStart(float duration)
         {
-            _rechargeView.ShowView(duration);
-
-            //_rechargeDisposable?.Dispose();
-            //_rechargeDisposable = _weaponEntity.RechargeProgress.Subscribe(value => _attackIndicator.ChangeRechargeValue(value));
+            _rechargeView.ShowView(duration); 
         }
 
         private void OnRechargeFinished()
         {
             _rechargeView.HideView();
-            
-            //_rechargeDisposable?.Dispose();
-            //_attackIndicator.ChangeRechargeValue(0f);
         }
 
         public void ClearCurrentWeapon()
